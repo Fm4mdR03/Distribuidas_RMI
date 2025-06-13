@@ -2,7 +2,6 @@
 
 echo "🧰 Configuración automática del cliente Java RMI"
 
-Verificar que no se ejecute como root
 if [[ "$EUID" -eq 0 ]]; then
 echo "⚠️ Por seguridad, no ejecutes este script como root. Usa un usuario normal."
 exit 1
@@ -18,7 +17,7 @@ CLIENTE_JAVA="cliente/Cliente.java"
 
 if grep -q "String host = " "$CLIENTE_JAVA"; then
 echo "🛠️ Modificando IP del servidor en Cliente.java"
-sed -i "s/String host = ".*";/String host = "$IP_SERVIDOR";/" "$CLIENTE_JAVA"
+sed -i "s/String host = ".*";/String host = "$IP_SERVIDOR"/" "$CLIENTE_JAVA"
 else
 echo "⚠️ No se encontró línea con 'String host = ...' en Cliente.java"
 fi

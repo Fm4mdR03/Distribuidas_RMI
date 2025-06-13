@@ -48,7 +48,7 @@ echo "✅ Base de datos y usuario configurados."
 echo "🧱 Compilando clases Java..."
 
 mkdir -p servidor/bin
-javac -cp "$CLASSPATH" -d servidor/bin interfaces/.java servidor/.java
+javac -cp "$CLASSPATH" -d servidor/bin interfaces/*.java servidor/*.java
 
 echo "🚀 Iniciando servidor RMI..."
 

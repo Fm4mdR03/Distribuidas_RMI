@@ -25,7 +25,7 @@ fi
 
 echo "🔨 Compilando clases cliente..."
 mkdir -p cliente/bin
-javac -d cliente/bin interfaces/.java cliente/.java
+javac -d cliente/bin interfaces/*.java cliente/*.java
 
 echo "🚀 Ejecutando cliente..."
 cd cliente/bin

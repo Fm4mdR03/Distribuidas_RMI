@@ -17,16 +17,16 @@ CLASSPATH="$PROJECT_DIR/$JDBC_DIR/$JDBC_JAR:."
 
 echo "📡 IP del servidor detectada: $IP_SERVIDOR"
 
-echo "📦 Instalando Java y MySQL..."
-apt update && apt install -y default-jdk mysql-server wget
+# echo "📦 Instalando Java y MySQL..."
+# apt update && apt install -y default-jdk mysql-server wget
 
-if [[ ! -f "$JDBC_DIR/$JDBC_JAR" ]]; then
-echo "⬇️ Descargando MySQL JDBC Connector..."
-wget $JDBC_URL
-tar -xzf mysql-connector-j-${JDBC_VERSION}.tar.gz
-else
-echo "✅ Driver JDBC ya existe."
-fi
+# if [[ ! -f "$JDBC_DIR/$JDBC_JAR" ]]; then
+# echo "⬇️ Descargando MySQL JDBC Connector..."
+# wget $JDBC_URL
+# tar -xzf mysql-connector-j-${JDBC_VERSION}.tar.gz
+# else
+# echo "✅ Driver JDBC ya existe."
+# fi
 
 echo "🛠️ Configurando base de datos..."
 

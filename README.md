@@ -1,29 +1,28 @@
-# Distribuidas_RMI
+# RMIAgendaDistribuida
 
-1. sudo apt update && sudo apt install default-jdk
-2. java -version
+Este proyecto demuestra una arquitectura distribuida en Java RMI donde un cliente puede conectarse a un servidor remoto que realiza operaciones CRUD sobre una base de datos MySQL.
 
-## Abrir puertos
-3. sudo ufw allow 1099
-4. sudo ufw enable
+## Estructura del Proyecto
 
-## IPs
-* Cliente:
-    - 192.168.100.1
-* Servidor:
-    - 192.168.100.2
+- interfaces/IAgenda.java → interfaz remota.
+- servidor/AgendaImpl.java → implementación de la lógica de negocio.
+- servidor/Servidor.java → registro RMI.
+- servidor/DBUtil.java → utilidades de conexión MySQL.
+- cliente/Cliente.java → aplicación cliente.
+- sql/crear_agenda.sql → script de base de datos.
 
-## Estructura
-- IHello.java: Interfaz remota.
-- HelloImpl.java: Implementación de la interfaz remota.
-- Servidor.java: Clase que inicia el servidor RMI.
-- Cliente.java: Clase que actúa como cliente RMI.
+## Requisitos
 
-## Ejecución
-En el servidor:
-javac *.java
-java Servidor
+- Java JDK 11+
+- MySQL Server (solo en VM servidor)
+- Red entre las máquinas (puerto 1099 abierto)
 
-En el cliente:
-javac *.java
-java Cliente
+## Instrucciones
+
+1. En VM1 (Servidor):
+   - Configura MySQL.
+   - Ejecuta Servidor.java
+
+2. En VM2 (Cliente):
+   - Edita Cliente.java con la IP del servidor.
+   - Ejecuta Cliente.java

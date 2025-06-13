@@ -1,6 +1,6 @@
 package servidor;
 
-import interfaces.IAgenda;
+import interfaces.Agenda;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 

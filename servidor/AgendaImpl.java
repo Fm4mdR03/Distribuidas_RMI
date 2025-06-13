@@ -1,13 +1,13 @@
 package servidor;
 
-import interfaces.IAgenda;
+import interfaces.Agenda;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AgendaImpl extends UnicastRemoteObject implements IAgenda {
+public class AgendaImpl extends UnicastRemoteObject implements Agenda {
 
     public AgendaImpl() throws RemoteException {
         super();

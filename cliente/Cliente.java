@@ -1,6 +1,6 @@
 package cliente;
 
-import interfaces.IAgenda;
+import interfaces.Agenda;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -12,7 +12,7 @@ public class Cliente {
         try {
             String host = "192.168.100.10";
             Registry registry = LocateRegistry.getRegistry(host, 1099);
-            IAgenda stub = (IAgenda) registry.lookup("AgendaService");
+            Agenda stub = (Agenda) registry.lookup("AgendaService");
             Scanner scanner = new Scanner(System.in);
             int opcion = 0;
 

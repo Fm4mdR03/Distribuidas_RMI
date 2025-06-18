@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Cliente {
     public static void main(String[] args) {
         try {
-            String host = "192.168.100.10";
+            String host = "192.168.100.20";
             Registry registry = LocateRegistry.getRegistry(host, 1099);
             Agenda stub = (Agenda) registry.lookup("AgendaService");
             Scanner scanner = new Scanner(System.in);
